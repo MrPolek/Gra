@@ -68,6 +68,8 @@
             this.gracz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gracz.TabIndex = 0;
             this.gracz.TabStop = false;
+            this.gracz.Tag = "gracz";
+            this.gracz.Click += new System.EventHandler(this.gracz_Click);
             // 
             // wrog12
             // 
@@ -205,7 +207,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(1, 411);
+            this.label1.Location = new System.Drawing.Point(22, 411);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 29);
             this.label1.TabIndex = 13;

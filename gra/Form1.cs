@@ -29,13 +29,13 @@ namespace gra
 
         private void klawiszdol(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Left)
+            if (e.KeyCode == Keys.Left)
             {
-                idzlewo = true;
+                idzlewo = true;          
             }
             if(e.KeyCode==Keys.Right)
             {
-                idzprawo = true;
+              idzprawo = true;   
             }
             if(e.KeyCode==Keys.Space && !jestnacisniety)
             {
@@ -46,27 +46,13 @@ namespace gra
             {
                 this.Close();
             }
-            foreach (Control g in this.Controls)
-            {
-                if (g is PictureBox && g.Tag == "gracz")
-                {
-                    if (((PictureBox)g).Left > 400)
-                    {
-                        idzlewo = false;
-                    }
-                    if (((PictureBox)g).Left < 400)
-                    {
-                        idzlewo = true;
-                    }
-                }
-            }
 
         }
 
         private void klawiszgora(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Left)
-            {
+            {            
                 idzlewo = false;
             }
             if(e.KeyCode==Keys.Right)
@@ -89,6 +75,30 @@ namespace gra
             {
                 gracz.Left += szybkoscgracz;
             }
+
+            foreach (Control f in this.Controls)
+            {
+                if (f is PictureBox && f.Tag == "gracz")
+                {
+                        if (((PictureBox)f).Left > 430)
+                        {
+
+                            ((PictureBox)f).Left = -10;
+                        }            
+                }
+            }
+            foreach (Control f in this.Controls)
+            {
+                if (f is PictureBox && f.Tag == "gracz")
+                {
+                    if (((PictureBox)f).Left < -11)
+                    {
+
+                        ((PictureBox)f).Left = 429;
+                    }
+                }
+            }
+
 
             foreach (Control x in this.Controls)
             {
@@ -142,6 +152,7 @@ namespace gra
 
 
             label1.Text = "Punkty: " + punkty;
+            label1.SendToBack();
             if(punkty>ileprzeciwnikow -1)
             {
                 koniecgry();
@@ -170,6 +181,11 @@ namespace gra
         {
             timer1.Stop();
             
+        }
+
+        private void gracz_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
