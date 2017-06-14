@@ -62,7 +62,7 @@
             // gracz
             // 
             this.gracz.Image = global::gra.Properties.Resources.tank;
-            this.gracz.Location = new System.Drawing.Point(271, 411);
+            this.gracz.Location = new System.Drawing.Point(272, 390);
             this.gracz.Name = "gracz";
             this.gracz.Size = new System.Drawing.Size(50, 50);
             this.gracz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
