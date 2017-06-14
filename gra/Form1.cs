@@ -64,14 +64,14 @@ namespace gra
             {
                 gracz.Left -= szybkoscgracz;
             }
-            else if(idzprawo)
+            else if (idzprawo)
             {
                 gracz.Left += szybkoscgracz;
             }
 
-            foreach(Control x in this.Controls)
+            foreach (Control x in this.Controls)
             {
-                if(x is PictureBox && x.Tag == "wrog")
+                if (x is PictureBox && x.Tag == "wrog")
                 {
                     if
                         (((PictureBox)x).Bounds.IntersectsWith(gracz.Bounds))
@@ -79,14 +79,44 @@ namespace gra
                         koniecgry();
                     }
                     ((PictureBox)x).Left += szybkosc;
-                    if (((PictureBox)x).Left>720)
+                    if (((PictureBox)x).Left > 720)
                     {
                         ((PictureBox)x).Top += ((PictureBox)x).Height + 10;
                         ((PictureBox)x).Left = -50;
                     }
                 }
             }
-        }
+
+            foreach (Control y in this.Controls)
+            {
+                if(y is PictureBox && y.Tag == "pocisk")
+                {
+                    y.Top -= 20;
+                    if(((PictureBox)y).Top<this.Height-490)
+                    {
+                        this.Controls.Remove(y);
+                    }
+                }
+            }
+            foreach(Control i in this.Controls)
+            {
+                foreach(Control j in this.Controls)
+                {
+                    if(i is PictureBox && i.Tag == "wrog")
+                    {
+                        if(j is PictureBox && j.Tag=="pocisk")
+                        {
+                            if(i.Bounds.IntersectsWith(j.Bounds))
+                            {
+                                punkty++;
+                                this.Controls.Remove(i);
+                                this.Controls.Remove(j);
+                            }
+                        }
+                    }
+                }
+            }
+         }
         private void robpocisk()
         {
             PictureBox pocisk = new PictureBox();
@@ -98,6 +128,10 @@ namespace gra
             this.Controls.Add(pocisk);
             pocisk.BringToFront();
         }
+
+
+
+
         private void koniecgry()
         {
             timer1.Stop();
