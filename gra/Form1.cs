@@ -23,24 +23,44 @@ namespace gra
         public Form1()
         {
             InitializeComponent();
+            Cursor.Hide();
+
         }
 
         private void klawiszdol(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Left)
             {
-               idzlewo = true;
+                idzlewo = true;
             }
             if(e.KeyCode==Keys.Right)
             {
                 idzprawo = true;
             }
-            if(e.KeyCode==Keys.Space&& !jestnacisniety)
+            if(e.KeyCode==Keys.Space && !jestnacisniety)
             {
                 jestnacisniety = true;
                 robpocisk();
             }
-        
+            if(e.KeyCode==Keys.Escape)
+            {
+                this.Close();
+            }
+            foreach (Control g in this.Controls)
+            {
+                if (g is PictureBox && g.Tag == "gracz")
+                {
+                    if (((PictureBox)g).Left > 400)
+                    {
+                        idzlewo = false;
+                    }
+                    if (((PictureBox)g).Left < 400)
+                    {
+                        idzlewo = true;
+                    }
+                }
+            }
+
         }
 
         private void klawiszgora(object sender, KeyEventArgs e)
@@ -81,7 +101,7 @@ namespace gra
                         MessageBox.Show("lol przegrales O.O");
                     }
                     ((PictureBox)x).Left += szybkosc;
-                    if (((PictureBox)x).Left > 720)
+                    if (((PictureBox)x).Left > 500)
                     {
                         ((PictureBox)x).Top += ((PictureBox)x).Height + 10;
                         ((PictureBox)x).Left = -50;
