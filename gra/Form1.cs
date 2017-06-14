@@ -35,6 +35,11 @@ namespace gra
             {
                 idzprawo = true;
             }
+            if(e.KeyCode==Keys.Space&& !jestnacisniety)
+            {
+                jestnacisniety = true;
+                robpocisk();
+            }
         }
 
         private void klawiszgora(object sender, KeyEventArgs e)
@@ -47,6 +52,10 @@ namespace gra
             {
                 idzprawo = false;
             }
+            if(jestnacisniety)
+            {
+                jestnacisniety = false;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -58,6 +67,24 @@ namespace gra
             else if(idzprawo)
             {
                 gracz.Left += szybkoscgracz;
+            }
+
+            foreach(Control x in this.Controls)
+            {
+                if(x is PictureBox && x.Tag == "wrog")
+                {
+                    if
+                        (((PictureBox)x).Bounds.IntersectsWith(gracz.Bounds))
+                    {
+                        koniecgry();
+                    }
+                    ((PictureBox)x).Left += szybkosc;
+                    if (((PictureBox)x).Left>720)
+                    {
+                        ((PictureBox)x).Top += ((PictureBox)x).Height + 10;
+                        ((PictureBox)x).Left = -50;
+                    }
+                }
             }
         }
         private void robpocisk()

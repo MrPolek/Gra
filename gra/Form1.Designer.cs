@@ -78,6 +78,7 @@
             this.wrog12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog12.TabIndex = 1;
             this.wrog12.TabStop = false;
+            this.wrog12.Tag = "wrog";
             // 
             // wrog1
             // 
@@ -88,6 +89,7 @@
             this.wrog1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog1.TabIndex = 2;
             this.wrog1.TabStop = false;
+            this.wrog1.Tag = "wrog";
             // 
             // wrog2
             // 
@@ -98,6 +100,7 @@
             this.wrog2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog2.TabIndex = 3;
             this.wrog2.TabStop = false;
+            this.wrog2.Tag = "wrog";
             // 
             // wrog3
             // 
@@ -108,6 +111,7 @@
             this.wrog3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog3.TabIndex = 4;
             this.wrog3.TabStop = false;
+            this.wrog3.Tag = "wrog";
             // 
             // wrog4
             // 
@@ -118,6 +122,7 @@
             this.wrog4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog4.TabIndex = 5;
             this.wrog4.TabStop = false;
+            this.wrog4.Tag = "wrog";
             // 
             // wrog5
             // 
@@ -128,6 +133,7 @@
             this.wrog5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog5.TabIndex = 6;
             this.wrog5.TabStop = false;
+            this.wrog5.Tag = "wrog";
             // 
             // wrog6
             // 
@@ -138,6 +144,7 @@
             this.wrog6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog6.TabIndex = 7;
             this.wrog6.TabStop = false;
+            this.wrog6.Tag = "wrog";
             // 
             // wrog7
             // 
@@ -148,6 +155,7 @@
             this.wrog7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog7.TabIndex = 8;
             this.wrog7.TabStop = false;
+            this.wrog7.Tag = "wrog";
             // 
             // wrog8
             // 
@@ -158,6 +166,7 @@
             this.wrog8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog8.TabIndex = 9;
             this.wrog8.TabStop = false;
+            this.wrog8.Tag = "wrog";
             // 
             // wrog9
             // 
@@ -168,6 +177,7 @@
             this.wrog9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog9.TabIndex = 10;
             this.wrog9.TabStop = false;
+            this.wrog9.Tag = "wrog";
             // 
             // wrog10
             // 
@@ -178,6 +188,7 @@
             this.wrog10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog10.TabIndex = 11;
             this.wrog10.TabStop = false;
+            this.wrog10.Tag = "wrog";
             // 
             // wrog11
             // 
@@ -188,6 +199,7 @@
             this.wrog11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wrog11.TabIndex = 12;
             this.wrog11.TabStop = false;
+            this.wrog11.Tag = "wrog";
             // 
             // label1
             // 
