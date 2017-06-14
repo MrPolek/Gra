@@ -60,5 +60,21 @@ namespace gra
                 gracz.Left += szybkoscgracz;
             }
         }
+        private void robpocisk()
+        {
+            PictureBox pocisk = new PictureBox();
+            pocisk.Image = Properties.Resources.bullet;
+            pocisk.Size = new Size(5, 20);
+            pocisk.Tag = "pocisk";
+            pocisk.Left = gracz.Left + gracz.Width / 2;
+            pocisk.Top = gracz.Top - 20;
+            this.Controls.Add(pocisk);
+            pocisk.BringToFront();
+        }
+        private void koniecgry()
+        {
+            timer1.Stop();
+            label1.Text += "koniec gry";
+        }
     }
 }
