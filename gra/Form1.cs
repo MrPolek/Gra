@@ -29,7 +29,7 @@ namespace gra
         {
             if(e.KeyCode==Keys.Left)
             {
-                idzlewo = true;
+               idzlewo = true;
             }
             if(e.KeyCode==Keys.Right)
             {
@@ -40,6 +40,7 @@ namespace gra
                 jestnacisniety = true;
                 robpocisk();
             }
+        
         }
 
         private void klawiszgora(object sender, KeyEventArgs e)
@@ -77,6 +78,7 @@ namespace gra
                         (((PictureBox)x).Bounds.IntersectsWith(gracz.Bounds))
                     {
                         koniecgry();
+                        MessageBox.Show("lol przegrales O.O");
                     }
                     ((PictureBox)x).Left += szybkosc;
                     if (((PictureBox)x).Left > 720)
@@ -116,6 +118,18 @@ namespace gra
                     }
                 }
             }
+
+
+
+            label1.Text = "Punkty: " + punkty;
+            if(punkty>ileprzeciwnikow -1)
+            {
+                koniecgry();
+                MessageBox.Show("Wygrales!!!");
+            }
+
+
+
          }
         private void robpocisk()
         {
@@ -129,13 +143,13 @@ namespace gra
             pocisk.BringToFront();
         }
 
-
+        
 
 
         private void koniecgry()
         {
             timer1.Stop();
-            label1.Text += "koniec gry";
+            
         }
     }
 }
