@@ -16,5 +16,20 @@ namespace gra
         {
             InitializeComponent();
         }
+
+        private void klawiszdol(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void klawiszgora(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
